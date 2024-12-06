@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/personajeListaFragment">
+    <fragment
+        android:id="@+id/personajeListaFragment"
+        android:name="dam.pmdm.tarea2mjtr.PersonajeListaFragment"
+        android:label="PersonajeListaFragment" />
+    <fragment
+        android:id="@+id/personajeDetailFragment"
+        android:name="dam.pmdm.tarea2mjtr.PersonajeDetailFragment"
+        android:label="PersonajeDetailFragment" />
+</navigation>
