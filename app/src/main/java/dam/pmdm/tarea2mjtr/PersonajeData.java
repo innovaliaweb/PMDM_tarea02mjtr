@@ -4,7 +4,7 @@ public class PersonajeData {
 
     private String nombre;
     private String descripcion;
-    private String imagen;
+    private int imagen;
     public String habilidades;
 
     public PersonajeData(String nombre, String descripcion, int imagen, String habilidades) {
@@ -22,7 +22,7 @@ public class PersonajeData {
         return descripcion;
     }
 
-    public String getImagen() {
+    public int getImagen() {
         return imagen;
     }
     public String getHabilidades() {

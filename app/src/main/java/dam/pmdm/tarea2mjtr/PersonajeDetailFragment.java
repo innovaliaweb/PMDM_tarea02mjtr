@@ -30,7 +30,7 @@ public class PersonajeDetailFragment extends Fragment {
 
         // Obtener datos del argumento que inicia este fragmento
         if (getArguments() != null) {
-            String imagen = getArguments().getString("imagen");
+            int imagen = getArguments().getInt("imagen");
             String nombre = getArguments().getString("nombre");
             String descripcion = getArguments().getString("descripcion");
             String habilidades = getArguments().getString("habilidades");
@@ -49,7 +49,7 @@ public class PersonajeDetailFragment extends Fragment {
         super.onStart();
         // Cambia el título del ActionBar
         if (getActivity() != null) {
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.personaje_detail_title);
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.lista_de_personajes);
         }
     }
 }

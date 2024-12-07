@@ -13,13 +13,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import dam.pmdm.tarea2mjtr.databinding.FragmentPersonajeListaBinding;
+import dam.pmdm.tarea2mjtr.databinding.PersonajeListFragmentBinding;
 
 import java.util.ArrayList;
 
 public class PersonajeListaFragment extends Fragment {
 
-    private FragmentPersonajeListaBinding binding; // Binding para el layout
+    private PersonajeListFragmentBinding binding; // Binding para el layout
     private ArrayList<PersonajeData> personajes; // Lista de personajes
     private PersonajeRecyclerViewAdapter adapter; // Adaptador del RecyclerView
 
@@ -28,7 +28,7 @@ public class PersonajeListaFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         // Inflar el layout utilizando el binding
-        binding = FragmentPersonajeListaBinding.inflate(inflater, container, false);
+        binding = PersonajeListFragmentBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -39,7 +39,7 @@ public class PersonajeListaFragment extends Fragment {
         // Inicializa la lista de personajes
         loadPersonajes(); // Cargar los personajes (puedes implementar esta función para obtener datos)
 
-        // Configurar el RecyclerView
+        /* Configurar el RecyclerView */
         adapter = new PersonajeRecyclerViewAdapter(personajes, getActivity());
         binding.personajesRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.personajesRecyclerview.setAdapter(adapter);
@@ -65,7 +65,7 @@ public class PersonajeListaFragment extends Fragment {
         super.onStart();
         // Cambia el título del ActionBar
         if (getActivity() != null) {
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.lista_personajes);
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.lista_de_personajes);
         }
     }
 }

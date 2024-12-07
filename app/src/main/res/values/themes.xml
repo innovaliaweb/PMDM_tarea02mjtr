@@ -1,9 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
     <!-- Base application theme. -->
-    <style name="Base.Theme.Tarea02pmdm" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Tarea02pmdm" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- SplashScreen cofiguration-->
+        <item name="android:windowSplashScreenBackground">@color/backgroundColor</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/backgroundColor</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logoapp</item>
+        <item name="android:windowSplashScreenAnimationDuration">2000</item>
+
     </style>
 
     <style name="Theme.Tarea02pmdm" parent="Base.Theme.Tarea02pmdm" />
+
+
+
 </resources>

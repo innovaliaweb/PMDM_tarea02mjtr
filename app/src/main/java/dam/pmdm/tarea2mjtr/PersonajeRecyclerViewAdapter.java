@@ -6,10 +6,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import dam.pmdm.tarea2mjtr.databinding.PersonajeRecyclerViewAdapterBinding;
+
+import dam.pmdm.tarea2mjtr.databinding.PersonajeCardviewBinding;
+
 import android.view.View;
 
-public abstract class PersonajeRecyclerViewAdapter  extends RecyclerView.Adapter<PersonajeViewHolder> {
+public class PersonajeRecyclerViewAdapter  extends RecyclerView.Adapter<PersonajeViewHolder> {
 
     private final ArrayList<PersonajeData> personajes;
     private final Context context;
@@ -22,7 +24,7 @@ public abstract class PersonajeRecyclerViewAdapter  extends RecyclerView.Adapter
     @NonNull
     @Override
     public PersonajeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        PersonajeRecyclerViewAdapterBinding binding = PersonajeRecyclerViewAdapterBinding.inflate(
+        PersonajeCardviewBinding binding = PersonajeCardviewBinding.inflate(
                 LayoutInflater.from(parent.getContext()), parent,false
         );
         return new PersonajeViewHolder(binding);
@@ -30,7 +32,7 @@ public abstract class PersonajeRecyclerViewAdapter  extends RecyclerView.Adapter
 
     //    Método para enlazar datos con ek ViewHolder
     @Override
-    public void onBindViewHolder(@NonNull personajeViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PersonajeViewHolder holder, int position) {
         PersonajeData currentPersonaje = this.personajes.get(position);
         holder.bind(currentPersonaje);
 
@@ -43,8 +45,8 @@ public abstract class PersonajeRecyclerViewAdapter  extends RecyclerView.Adapter
         return personajes.size();
     }
 
-    private void itemClicked(PersonajeItem currentPersonaje, View view) {
+    private void itemClicked(PersonajeData currentPersonaje, View view) {
         // Llama a la función gameClicked de MainActivity, pasando la vista
-        ((MainActivity) context).gameClicked(currentPersonaje, view);
+        ((MainActivity) context).personajeClicked(currentPersonaje, view);
     }
 }

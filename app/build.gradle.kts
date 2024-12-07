@@ -43,6 +43,9 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("androidx.navigation:navigation-fragment-ktx:2.7.1")
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.1")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation ("androidx.core:core-splashscreen:1.0.1")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
