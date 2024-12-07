@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
 
             setContentView(R.layout.splash);
 
-            new Handler().postDelayed(new Runnable() {
+            new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     // Inicia la actividad principal
