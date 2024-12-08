@@ -1,7 +1,6 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 <androidx.coordinatorlayout.widget.CoordinatorLayout
-
     android:id="@+id/personaje_lista_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -11,6 +10,8 @@
         android:id="@+id/personajes_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:clipToPadding="false"
         android:paddingTop="?attr/actionBarSize"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

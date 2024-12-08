@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
-            name="game"
+            name="personaje"
             type="dam.pmdm.tarea2mjtr.PersonajeData" />
     </data>
 
@@ -40,12 +40,13 @@
                     android:id="@+id/descripcion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Descripción personaje" />
+                    android:text="@string/descripcionPersonaje" />
 
                 <TextView
                     android:id="@+id/habilidades"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/habilidadesPersonaje"
                     />
 
             </LinearLayout>

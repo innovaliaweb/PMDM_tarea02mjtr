@@ -20,15 +20,20 @@ public class SplashActivity extends AppCompatActivity {
 
             setContentView(R.layout.splash);
 
-            new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    // Inicia la actividad principal
-                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish(); // Cierra la actividad del Splash Screen
-                }
-            }, SPLASH_DELAY); // Retraso de 3 segundos
+//            new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    // Inicia la actividad principal
+//                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+//                    startActivity(intent);
+//                    finish(); // Cierra la actividad del Splash Screen
+//                }
+//            }, SPLASH_DELAY); // Retraso de 3 segundos
+            new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }, SPLASH_DELAY); // 3 segundos
         }else{
             //Si la version es 31 o superior se maneja automaticamente
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);

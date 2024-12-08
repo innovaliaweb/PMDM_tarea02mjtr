@@ -1,9 +1,12 @@
 package dam.pmdm.tarea2mjtr;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 import androidx.activity.EdgeToEdge;
@@ -48,11 +51,37 @@ public class MainActivity extends AppCompatActivity {
 
         // Configura el NavController
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+//        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+//        NavigationUI.setupActionBarWithNavController(this, navController);
+
+
+        // Configura el Toolbar para trabajar con el NavController
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+
+
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_acerca_de) {
+            new AlertDialog.Builder(this)
+                    .setTitle("@string/acerca_de")
+                    .setMessage("@string/textoAcercaDe")
+                    .setPositiveButton("@string/labelAceptar", null)
+                    .show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
     // Método para manejar el clic en un personaje
     public void personajeClicked(PersonajeData personaje, View view) {
         // Crear un Bundle para pasar los datos al PersonajeDetailFragment

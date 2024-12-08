@@ -2,4 +2,12 @@
     <string name="app_name">Tarea02pmdm</string>
     <string name="lista_de_personajes">Lista de personajes</string>
     <string name="personaje_detail_title">Detalles Personaje</string>
+    <string name="personajeNombre">Nombre Personaje</string>
+    <string name="habilidadesLabel">Habilidades</string>
+    <string name="descripcionLabel">Descripción</string>
+    <string name="descripcionPersonaje">Descripción Personaje</string>
+    <string name="habilidadesPersonaje">Habilidades Personaje</string>
+    <string name="labelAceptar">Aceptar</string>
+    <string name="acerca_de">Acerca de...</string>
+    <string name="textoAcercaDe">Aplicación desarrollada por Manuel Jesús Torralbo Rodríguez. Versión 1.0.</string>
 </resources>
