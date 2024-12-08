@@ -45,6 +45,7 @@ dependencies {
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.1")
     implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation ("androidx.core:core-splashscreen:1.0.1")
+    implementation("androidx.fragment:fragment-ktx:1.5.7")
 
     implementation(libs.appcompat)
     implementation(libs.material)

@@ -2,13 +2,15 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/personajeListaFragment">
+    app:startDestination="@id/listadoPersonajes">
+
     <fragment
-        android:id="@+id/personajeListaFragment"
+        android:id="@+id/listadoPersonajes"
         android:name="dam.pmdm.tarea2mjtr.PersonajeListaFragment"
         android:label="PersonajeListaFragment" />
+
     <fragment
-        android:id="@+id/personajeDetailFragment"
+        android:id="@+id/detallePersonajes"
         android:name="dam.pmdm.tarea2mjtr.PersonajeDetailFragment"
         android:label="PersonajeDetailFragment" />
 </navigation>

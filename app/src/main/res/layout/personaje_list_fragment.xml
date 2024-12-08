@@ -1,5 +1,5 @@
-
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:id="@+id/personaje_lista_fragment"
     android:layout_width="match_parent"

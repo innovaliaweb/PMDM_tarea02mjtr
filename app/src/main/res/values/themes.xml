@@ -10,7 +10,7 @@
         <!-- SplashScreen cofiguration-->
         <item name="android:windowSplashScreenBackground">@color/backgroundColor</item>
         <item name="android:windowSplashScreenIconBackgroundColor">@color/backgroundColor</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logoapp</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/iconosplash</item>
         <item name="android:windowSplashScreenAnimationDuration">3000</item>
 
     </style>
@@ -22,7 +22,7 @@
 
         <item name="android:windowSplashScreenBackground">@color/backgroundColor</item>
         <item name="android:windowSplashScreenIconBackgroundColor">@color/backgroundColor</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logoapp</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/iconosplash</item>
         <item name="android:windowSplashScreenAnimationDuration">3000</item>
     </style>
 <!--    <style name="ToolbarWithMargin" parent="Widget.AppCompat.Toolbar">-->

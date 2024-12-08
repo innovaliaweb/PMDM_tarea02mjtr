@@ -2,26 +2,22 @@ package dam.pmdm.tarea2mjtr;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.splashscreen.SplashScreen;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-
-import java.util.List;
+import com.google.android.material.navigation.NavigationView;
 
 import dam.pmdm.tarea2mjtr.databinding.ActivityMainBinding;
 
@@ -29,74 +25,136 @@ public class MainActivity extends AppCompatActivity {
 
     private NavController navController;
     private ActivityMainBinding binding;
-    private ActionBarDrawerToggle toogle;
+    private ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        // Mostrar pantalla de splash
         SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
 
-
+        // Inflar el layout principal con ViewBinding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Configura la Toolbar
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        // Configurar la Toolbar
+        Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
 
+        // Configurar DrawerLayout y NavigationView
+        DrawerLayout drawerLayout = binding.drawerLayout;
+        NavigationView navigationView = binding.navView;
 
-
-
-        // Configura el NavController
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-//        NavigationUI.setupActionBarWithNavController(this, navController);
-
-
-        // Configura el Toolbar para trabajar con el NavController
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-
-
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_acerca_de) {
-            new AlertDialog.Builder(this)
-                    .setTitle("@string/acerca_de")
-                    .setMessage("@string/textoAcercaDe")
-                    .setPositiveButton("@string/labelAceptar", null)
-                    .show();
-            return true;
+        // Configurar NavController
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.nav_host_fragment);
+        if (navHostFragment != null) {
+            navController = navHostFragment.getNavController();
         }
-        return super.onOptionsItemSelected(item);
+
+        // Configurar AppBar con NavigationUI
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph())
+                .setOpenableLayout(drawerLayout)
+                .build();
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(binding.navView, navController);
+
+        // Listener para cambios en la vista del NavController
+        //navController.addOnDestinationChangedListener(this::onChangeView);
+
+        // Cargar el fragmento inicial solo si es necesario
+//        if (savedInstanceState == null) {
+//            navController.navigate(R.id.listadoPersonajes);
+//        }
+
+        // Configurar ActionBarDrawerToggle
+        configureToggleMenu();
+
+        // Configurar navegación del NavigationView
+        configureNavigation(navigationView, drawerLayout);
     }
-    // Método para manejar el clic en un personaje
+
+    /**
+     * Cambia el estado del icono del menú según la pantalla actual.
+     */
+    private void onChangeView(NavController navController, NavDestination navDestination, Bundle bundle) {
+        if (toggle == null) return;
+
+        if (navDestination.getId() == R.id.personaje_detail_fragment) {
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setTitle(R.string.personaje_detail_title);
+            }
+            toggle.setDrawerIndicatorEnabled(false);
+        } else {
+            toggle.setDrawerIndicatorEnabled(true);
+        }
+    }
+
+    /**
+     * Configura el ActionBarDrawerToggle.
+     */
+    private void configureToggleMenu() {
+        toggle = new ActionBarDrawerToggle(
+                this,
+                binding.drawerLayout,
+                R.string.abrir_menu,
+                R.string.cerrar_menu
+        );
+        binding.drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+    }
+
+    /**
+     * Configura la navegación del NavigationView.
+     */
+    private void configureNavigation(NavigationView navigationView, DrawerLayout drawerLayout) {
+        navigationView.setNavigationItemSelectedListener(menuItem -> {
+            if (menuItem.getItemId() == R.id.action_acerca_de) {
+                mostrarAcercaDialog();
+            } else if (menuItem.getItemId() == R.id.nav_home) {
+                navController.navigate(R.id.listadoPersonajes);
+            }
+
+            drawerLayout.closeDrawers(); // Cerrar el menú lateral
+            return true;
+        });
+    }
+
+    /**
+     * Muestra un diálogo con la información de "Acerca de".
+     */
+    private void mostrarAcercaDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.acerca_de)
+                .setMessage(R.string.textoAcercaDe)
+                .setPositiveButton(R.string.labelAceptar, null)
+                .show();
+    }
+
+    /**
+     * Navegación al fragmento de detalles del personaje.
+     */
     public void personajeClicked(PersonajeData personaje, View view) {
-        // Crear un Bundle para pasar los datos al PersonajeDetailFragment
         Bundle bundle = new Bundle();
         bundle.putString("nombre", personaje.getNombre());
         bundle.putString("descripcion", personaje.getDescripcion());
         bundle.putString("habilidades", personaje.getHabilidades());
         bundle.putInt("imagen", personaje.getImagen());
 
-        // Navegar al PersonajeDetailFragment con el Bundle
-        Navigation.findNavController(view).navigate(R.id.personajeDetailFragment, bundle);
+        Navigation.findNavController(view).navigate(R.id.detallePersonajes, bundle);
     }
+
     @Override
     public boolean onSupportNavigateUp() {
-        // Utiliza el método navigateUp del NavController
-        return navController.navigateUp() || super.onSupportNavigateUp();
+        return NavigationUI.navigateUp(navController, binding.drawerLayout) || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Manejar clics en el icono del menú
+        if (toggle != null && toggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
