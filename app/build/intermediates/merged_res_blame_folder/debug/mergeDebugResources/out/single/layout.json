@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:\\layout\\personaje_cardview.xml",
+        "source": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-main-54:\\layout\\personaje_cardview.xml"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-main-54:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:\\layout\\fragment_settings.xml",
+        "source": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-main-54:\\layout\\fragment_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-main-54:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:\\layout\\personaje_detail_fragment.xml",
+        "source": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-main-54:\\layout\\personaje_detail_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:\\layout\\personaje_list_fragment.xml",
+        "source": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-main-54:\\layout\\personaje_list_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:\\layout\\splash.xml",
+        "source": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-main-54:\\layout\\splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:\\layout\\nav_header.xml",
+        "source": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-main-54:\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:\\layout\\fragment_perfil_fragment.xml",
+        "source": "C:\\Users\\usuario\\.gradle\\daemon\\8.7\\dam.pmdm.tarea2mjtr.app-main-54:\\layout\\fragment_perfil_fragment.xml"
+    },
+    {
+        "merged": "dam.pmdm.tarea2mjtr.app-mergeDebugResources-51:/layout/nav_header.xml",
+        "source": "dam.pmdm.tarea2mjtr.app-main-54:/layout/nav_header.xml"
+    }
+]

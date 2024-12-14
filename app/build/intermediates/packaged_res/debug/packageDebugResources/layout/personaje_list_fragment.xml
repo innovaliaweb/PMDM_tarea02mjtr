@@ -1,0 +1,19 @@
+
+                                                        
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/personaje_lista_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:tag="layout/personaje_list_fragment_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/personajes_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="?attr/actionBarSize"
+        style="@style/CustomRecyclerView" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+         

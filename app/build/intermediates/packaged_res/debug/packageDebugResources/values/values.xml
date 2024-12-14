@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="colorAccent">#007FFF</color>
+    <color name="colorPrimary">#FF0000</color>
+    <color name="colorPrimaryDark">#B22222</color>
+    <color name="gris">#767676</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="purple_700">#673AB7</color>
+    <color name="teal_200">#FFCC80</color>
+    <color name="toolbarTextColor">#FFFFFF</color>
+    <string name="abrir_menu">Abrir menú</string>
+    <string name="acerca_de">Acerca de...</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="app_name">Tarea02pmdm</string>
+    <string name="attachment_summary_off">No adjuntar automáticamente</string>
+    <string name="attachment_summary_on">Adjuntar automáticamente</string>
+    <string name="attachment_title">Adjuntar archivos</string>
+    <string name="cerrar_menu">Cerrar menú</string>
+    <string name="descripcionLabel">Descripción</string>
+    <string name="descripcionPersonaje">Descripción Personaje</string>
+    <string name="detalle_personaje">Detalles Personaje</string>
+    <string name="habilidadesLabel">Habilidades</string>
+    <string name="habilidadesPersonaje">Habilidades Personaje</string>
+    <string name="home">Home</string>
+    <string name="idioma_actual">Idioma actual: Español</string>
+    <string name="idiomas">Idiomas</string>
+    <string name="labelAceptar">Aceptar</string>
+    <string name="lista_de_personajes">Lista de personajes</string>
+    <string name="mensajeBienvenida">Bienvenidos al mundo de Mario</string>
+    <string name="messages_header">Mensajes</string>
+    <string name="personajeNombre">Nombre Personaje</string>
+    <string name="reply_title">Título de la respuesta</string>
+    <string name="signature_title">Título de la firma</string>
+    <string name="switch_idioma_label">Cambiar entre Español e Inglés</string>
+    <string name="sync_header">Sincronización</string>
+    <string name="sync_title">Sincronizar datos</string>
+    <string name="textoAcercaDe">Aplicación desarrollada por Manuel Jesús Torralbo Rodríguez. Versión 1.0.</string>
+    <string name="title_activity_settings">Titulo Actividad</string>
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+        <item name="android:windowSplashScreenBackground">@color/backgroundColor</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/backgroundColor</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/iconosplash</item>
+        <item name="android:windowSplashScreenAnimationDuration">3000</item>
+    </style>
+    <style name="Base.Theme.Tarea02pmdm" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+    <style name="CustomButton">
+        <item name="android:backgroundTint">@color/teal_200</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="CustomRecyclerView">
+        <item name="android:padding">8dp</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:divider">@color/gris</item>
+    </style>
+    <style name="CustomTextNombrePersonaje">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+
+    </style>
+    <style name="CustomTextParrafo">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+    <style name="CustomTextTitulo">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+
+    </style>
+    <style name="EstiloDetallesPersonajes">
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/backgroundColor</item>
+    </style>
+</resources>
