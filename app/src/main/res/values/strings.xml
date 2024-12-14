@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Tarea02pmdm</string>
+    <string name="mensajeBienvenida">Bienvenidos al mundo de Mario</string>
     <string name="lista_de_personajes">Lista de personajes</string>
-    <string name="personaje_detail_title">Detalles Personaje</string>
+    <string name="detalle_personaje">Detalles Personaje</string>
     <string name="personajeNombre">Nombre Personaje</string>
     <string name="habilidadesLabel">Habilidades</string>
     <string name="descripcionLabel">Descripción</string>
@@ -9,10 +10,23 @@
     <string name="habilidadesPersonaje">Habilidades Personaje</string>
     <string name="labelAceptar">Aceptar</string>
     <string name="home">Home</string>
+    <string name="ajustes">Ajustes</string>">
+    <string name="idiomas">Idiomas</string>">
     <string name="acerca_de">Acerca de...</string>
     <string name="abrir_menu">Abrir menú</string>
     <string name="cerrar_menu">Cerrar menú</string>
     <string name="textoAcercaDe">Aplicación desarrollada por Manuel Jesús Torralbo Rodríguez. Versión 1.0.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="idioma_actual">Idioma actual: Español</string>
+    <string name="switch_idioma_label">Cambiar entre Español e Inglés</string>
+    <string name="title_activity_settings">Titulo Actividad</string>
+    <string name="messages_header">Mensajes</string>
+    <string name="signature_title">Título de la firma</string>
+    <string name="reply_title">Título de la respuesta</string>
+    <string name="sync_header">Sincronización</string>
+    <string name="sync_title">Sincronizar datos</string>
+    <string name="attachment_summary_off">No adjuntar automáticamente</string>
+    <string name="attachment_summary_on">Adjuntar automáticamente</string>
+    <string name="attachment_title">Adjuntar archivos</string>
+
+
 </resources>

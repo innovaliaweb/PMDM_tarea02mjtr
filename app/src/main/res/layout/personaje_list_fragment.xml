@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         android:layout_marginTop="0dp"
         android:clipToPadding="false"
-        android:paddingTop="?attr/actionBarSize"/>
+        android:paddingTop="?attr/actionBarSize"
+        style="@style/CustomRecyclerView" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

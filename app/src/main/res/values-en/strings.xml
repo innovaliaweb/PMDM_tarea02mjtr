@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Task02pmdm</string>
+    <string name="mensajeBienvenida">Welcome to the Mario world</string>
+    <string name="lista_de_personajes">Character List</string>
+    <string name="detalle_personaje">Character Details</string>
+    <string name="personajeNombre">Character Name</string>
+    <string name="habilidadesLabel">Abilities</string>
+    <string name="descripcionLabel">Description</string>
+    <string name="descripcionPersonaje">Character Description</string>
+    <string name="habilidadesPersonaje">Character Abilities</string>
+    <string name="labelAceptar">Accept</string>
+    <string name="home">Home</string>
+    <string name="ajustes">Settings</string>
+    <string name="idiomas">Languages</string>
+    <string name="acerca_de">About...</string>
+    <string name="abrir_menu">Open Menu</string>
+    <string name="cerrar_menu">Close Menu</string>
+    <string name="textoAcercaDe">Application developed by Manuel Jesús Torralbo Rodríguez. Version 1.0.</string>
+    <string name="switch_idioma_label">Switch between English and Spanish</string>
+    <string name="idioma_actual">Current language: English</string>
+    <string name="title_activity_settings">Titulo Actividad</string>
+    <string name="messages_header">Mensajes</string>
+    <string name="signature_title">Título de la firma</string>
+    <string name="reply_title">Título de la respuesta</string>
+    <string name="sync_header">Sincronización</string>
+    <string name="sync_title">Sincronizar datos</string>
+    <string name="attachment_summary_off">No adjuntar automáticamente</string>
+    <string name="attachment_summary_on">Adjuntar automáticamente</string>
+    <string name="attachment_title">Adjuntar archivos</string>
+</resources>

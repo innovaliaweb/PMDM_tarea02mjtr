@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/backgroundColor</item>
+    </style>
+    <style name= "EstiloDetallesPersonajes">
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- Estilo para TextViews -->
+    <style name="CustomTextNombrePersonaje">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+
+    </style>
+    <style name="CustomTextTitulo">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+
+    </style>
+    <style name="CustomTextParrafo">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <!-- Estilo para Botones -->
+    <style name="CustomButton">
+        <item name="android:backgroundTint">@color/teal_200</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Estilo para RecyclerView -->
+    <style name="CustomRecyclerView">
+        <item name="android:padding">8dp</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:divider">@color/gris</item>
+    </style>
+</resources>

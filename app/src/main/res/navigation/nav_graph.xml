@@ -7,10 +7,16 @@
     <fragment
         android:id="@+id/listadoPersonajes"
         android:name="dam.pmdm.tarea2mjtr.PersonajeListaFragment"
-        android:label="PersonajeListaFragment" />
+        android:label="@string/lista_de_personajes" />
 
     <fragment
         android:id="@+id/detallePersonajes"
         android:name="dam.pmdm.tarea2mjtr.PersonajeDetailFragment"
-        android:label="PersonajeDetailFragment" />
+        android:label="@string/detalle_personaje" />
+
+    <fragment
+        android:id="@+id/settings_layout"
+        android:name="dam.pmdm.tarea2mjtr.SettingsFragment"
+        android:label="@string/ajustes" />
+
 </navigation>

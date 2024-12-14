@@ -13,9 +13,22 @@ import com.squareup.picasso.Picasso;
 
 import dam.pmdm.tarea2mjtr.databinding.PersonajeDetailFragmentBinding;
 
+/**
+ * Fragmento que muestra los detalles de un personaje seleccionado.
+ * Permite visualizar información como imagen, nombre, descripción y habilidades del personaje.
+ */
 public class PersonajeDetailFragment extends Fragment {
+
     private PersonajeDetailFragmentBinding binding;
 
+    /**
+     * Infla el layout correspondiente al fragmento de detalles del personaje.
+     *
+     * @param inflater Objeto LayoutInflater para inflar vistas en el fragmento.
+     * @param container Contenedor padre al que se añadirá la vista del fragmento.
+     * @param savedInstanceState Estado guardado del fragmento, si existe.
+     * @return La vista raíz del fragmento.
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -24,6 +37,13 @@ public class PersonajeDetailFragment extends Fragment {
         return binding.getRoot();
     }
 
+    /**
+     * Método llamado después de que la vista ha sido creada.
+     * Recupera los argumentos enviados al fragmento y actualiza los componentes de la interfaz.
+     *
+     * @param view La vista raíz inflada del fragmento.
+     * @param savedInstanceState Estado guardado del fragmento, si existe.
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -44,6 +64,11 @@ public class PersonajeDetailFragment extends Fragment {
             binding.habilidades.setText(habilidades);
         }
     }
+
+    /**
+     * Método llamado cuando el fragmento pasa al estado de "visible".
+     * Cambia el título del ActionBar al título correspondiente.
+     */
     @Override
     public void onStart() {
         super.onStart();
@@ -53,5 +78,3 @@ public class PersonajeDetailFragment extends Fragment {
         }
     }
 }
-
-
